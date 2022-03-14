@@ -4,16 +4,20 @@ const db = require('./database.js');
 
 const User = db.define('Users', {
 	// Model attributes are defined here
-	email: {
-		type: DataTypes.STRING,
+	id: {
+		type: DataTypes.UUID,
 		allowNull: false,
 		primaryKey: true
 	},
+	email: {
+		type: DataTypes.STRING(255),
+		allowNull: false
+	},
 	fullname: {
-		type: DataTypes.STRING
+		type: DataTypes.STRING(255)
 	},
 	phone: {
-		type: DataTypes.STRING
+		type: DataTypes.STRING(255)
 	},
 	age: {
 		type: DataTypes.INTEGER
@@ -22,7 +26,7 @@ const User = db.define('Users', {
 		type: DataTypes.BOOLEAN
 	},
 	password: {
-		type: DataTypes.STRING
+		type: DataTypes.STRING(255)
 	}
 });
 
