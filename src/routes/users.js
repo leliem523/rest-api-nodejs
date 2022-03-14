@@ -1,7 +1,10 @@
-var express = require('express');
+import express from 'express';
+
+import auth from '../middleware/auth';
+
+import controller from '../controllers/users';
+
 var router = express.Router();
-var controller = require('../controllers/users');
-const auth = require('../middleware/auth');
 
 /* GET users listing. */
 router.get('/', controller.getUsers);
@@ -11,4 +14,4 @@ router.post('/update', controller.updateUser);
 router.get('/delete/:userId', controller.delUserById);
 router.post('/login', controller.checkLogin);
 
-module.exports = router;
+export default router;

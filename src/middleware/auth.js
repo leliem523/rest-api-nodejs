@@ -1,4 +1,4 @@
-const jwt = require('jsonwebtoken');
+import jwt from 'jsonwebtoken';
 
 exports.authentication = (req, res, next) => {
 	const token = req.header('token');

@@ -1,6 +1,6 @@
-const { DataTypes } = require('sequelize');
+import { DataTypes } from 'sequelize';
 
-const db = require('./database.js');
+import db from './database.js';
 
 const User = db.define('Users', {
 	// Model attributes are defined here
@@ -32,4 +32,4 @@ const User = db.define('Users', {
 
 db.sync(); // Lenh khoi tao database
 
-module.exports = User;
+export default User;

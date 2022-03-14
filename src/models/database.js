@@ -1,4 +1,4 @@
-const { Sequelize } = require('sequelize');
+import { Sequelize } from 'sequelize';
 
 const db = new Sequelize('dbmanager', 'root', '', {
 	host: 'localhost',
@@ -7,4 +7,4 @@ const db = new Sequelize('dbmanager', 'root', '', {
 
 db.authenticate().then(() => console.log('co so du lieu da duoc ket noi !!!'));
 
-module.exports = db;
+export default db;
