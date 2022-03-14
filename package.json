@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"private": false,
 	"scripts": {
-		"start": "nodemon --delay 500ms --exec babel-node src/app.js",
+		"start": "nodemon --delay 500ms --exec ./node_modules/.bin/babel-node src/app.js",
 		"clean": "rm -rf dist",
 		"build": "yarn clean && babel ./src --out-dir dist --copy-files"
 	},
